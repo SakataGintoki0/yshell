@@ -14,7 +14,12 @@ int main() {
 
     string input;
     getline(cin, input);
-    cout << input << ": command not found" << endl;
+
+    if (input == "exit 0") {
+      exit(0);
+    } else {
+      cout << input << ": command not found" << endl;
+    }
   }
 
   return 0;
