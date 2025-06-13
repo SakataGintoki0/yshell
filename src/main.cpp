@@ -5,15 +5,17 @@ using namespace std;
 
 int main() {
   // Flush after every cout / std:cerr
-  cout << unitbuf;
-  cerr << unitbuf;
+  while (true) {
 
-  cout << "$ ";
+    cout << unitbuf;
+    cerr << unitbuf;
 
-  string input;
-  getline(cin, input); 
-	cout << input << ": command not found" << endl; 
+    cout << "$ ";
 
+    string input;
+    getline(cin, input);
+    cout << input << ": command not found" << endl;
+  }
 
-return 0;
+  return 0;
 }
