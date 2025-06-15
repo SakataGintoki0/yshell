@@ -16,3 +16,6 @@ void type(string argument);
 // helpers
 bool binarySearchString(vector<string> arr, string word);
 string getArgument(vector<string> tokens);
+vector<string> getPath();
+bool isPathExecutable(string path, string cmd);
+string executablePath(vector<string> paths, string cmd);
