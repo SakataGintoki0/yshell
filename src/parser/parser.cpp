@@ -13,6 +13,6 @@ void parser(vector<string> tokens) {
   } else if (keyword == "type") {
     type(argument);
   } else {
-    printError(keyword, "command not found");
+    execute(keyword, argument);
   }
 }

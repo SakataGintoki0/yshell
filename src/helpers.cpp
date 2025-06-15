@@ -1,6 +1,7 @@
 #include "utils.h"
 #include <cstdlib> // for PATH
-#include <cstring>
+#include <cstdlib> // for system()
+#include <cstring> // for strlen()
 #include <iostream>
 #include <string>
 #include <unistd.h> // for access()
@@ -66,8 +67,9 @@ bool isPathExecutable(string path, string cmd) {
   return isExecutable;
 }
 
-string executablePath(vector<string> paths, string cmd) {
+string executablePath(string cmd) {
   string path = "";
+  vector<string> paths = getPath();
   for (int i = 0; i < paths.size(); i++) {
     if (isPathExecutable(paths[i], cmd)) {
       path = paths[i] + '/' + cmd;
@@ -76,4 +78,19 @@ string executablePath(vector<string> paths, string cmd) {
   }
 
   return path;
+}
+
+void execute(string keyword, string argument) {
+  string path = executablePath(keyword);
+
+  if (path.size() == 0) {
+    printError(keyword, "command not found");
+    return;
+  }
+  string cmdStr = path + ' ' + argument;
+  int ret = system(cmdStr.c_str());
+
+  if (ret == -1) {
+    cerr << "Failed to execute command!" << endl;
+  }
 }
