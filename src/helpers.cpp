@@ -87,7 +87,7 @@ void execute(string keyword, string argument) {
     printError(keyword, "command not found");
     return;
   }
-  string cmdStr = path + ' ' + argument;
+  string cmdStr = keyword + ' ' + argument;
   int ret = system(cmdStr.c_str());
 
   if (ret == -1) {
