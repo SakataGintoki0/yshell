@@ -1,5 +1,6 @@
 #include "utils.h"
 #include <cstdlib> // for PATH
+#include <cstring>
 #include <iostream>
 #include <string>
 #include <unistd.h> // for access()
