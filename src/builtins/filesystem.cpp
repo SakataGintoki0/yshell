@@ -10,7 +10,14 @@ void pwd() {
   cout << cwd.string() << endl;
 }
 
+// /home/username
+
 void changeDir(string pathname) {
+  if (pathname[0] == '~') {
+    string appendUser = "/Users/" + getUser();
+    pathname.replace(0, 1, appendUser);
+  }
+
   if (!fs::exists(pathname)) {
     cout << "cd: " << pathname << ": No such file or directory" << endl;
   } else {

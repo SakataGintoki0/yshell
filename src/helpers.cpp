@@ -1,5 +1,5 @@
 #include "utils.h"
-#include <cstdlib> // for PATH
+#include <cstdlib> // for PATH, getenv()
 #include <cstdlib> // for system()
 #include <cstring> // for strlen()
 #include <iostream>
@@ -94,3 +94,5 @@ void execute(string keyword, string argument) {
     cerr << "Failed to execute command!" << endl;
   }
 }
+
+string getUser() { return getenv("USER"); }

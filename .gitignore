@@ -1045,3 +1045,10 @@ dkms.conf
 *.dis
 
 vcpkg_installed
+
+## Other files to be ignored
+# Env file
+.env
+
+
+
