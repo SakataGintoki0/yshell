@@ -1,18 +1,12 @@
 #!/bin/sh
-
 set -e # Exit early if any commands fail
 
-#
-# - Edit this to change how your program compiles locally
-# - Edit .codecrafters/compile.sh to change how your program compiles remotely
+PROJECT_DIR="/Users/sakata/main/something/projects/ysh/yshell"
+
 (
-  cd "$(dirname "$0")" # Ensure compile steps are run within the repository directory
+  cd "$PROJECT_DIR"
   cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake
   cmake --build ./build
 )
 
-# Copied from .codecrafters/run.sh
-#
-# - Edit this to change how your program runs locally
-# - Edit .codecrafters/run.sh to change how your program runs remotely
-exec ./build/shell "$@"
+exec "$PROJECT_DIR/build/shell" "$@"
