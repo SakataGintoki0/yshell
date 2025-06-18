@@ -14,7 +14,7 @@ void pwd() {
 
 void changeDir(string pathname) {
   if (pathname[0] == '~') {
-    string appendUser = "/Users/" + getUser();
+    string appendUser = "/" + getHome() + "/" + getUser();
     pathname.replace(0, 1, appendUser);
   }
 

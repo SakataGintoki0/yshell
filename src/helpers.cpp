@@ -95,5 +95,12 @@ void execute(string keyword, string argument) {
   }
 }
 
-string getUser() { return getenv("USER"); }
-string getHome() { return getenv("HOME"); }
+string getUser() {
+  const char *user = getenv("USER");
+  return user ? string(user) : "";
+}
+string getHome() {
+
+  const char *home = getenv("HOME");
+  return home ? string(home) : "";
+}
