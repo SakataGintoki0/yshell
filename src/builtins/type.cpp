@@ -6,7 +6,7 @@
 using namespace std;
 
 void type(string argument) {
-  vector<string> builtins = {"echo", "type", "exit"};
+  vector<string> builtins = {"echo", "pwd", "type", "exit"};
   string executablePathStr = executablePath(argument);
 
   if (binarySearchString(builtins, argument)) {
