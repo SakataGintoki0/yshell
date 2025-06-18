@@ -7,5 +7,5 @@ using namespace filesystem;
 
 void pwd() {
   path cwd = current_path();
-  cout << cwd << endl;
+  cout << cwd.string() << endl;
 }
