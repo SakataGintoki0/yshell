@@ -14,6 +14,8 @@ void parser(vector<string> tokens) {
     type(argument);
   } else if (keyword == "pwd") {
     pwd();
+  } else if (keyword == "cd") {
+    changeDir(argument);
   } else {
     execute(keyword, argument);
   }

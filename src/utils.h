@@ -21,3 +21,7 @@ vector<string> getPath();
 bool isPathExecutable(string path, string cmd);
 string executablePath(string cmd);
 void execute(string keyword, string argument);
+
+// env loader
+void load_env_file(const string &filepath);
+void changeDir(string pathname);

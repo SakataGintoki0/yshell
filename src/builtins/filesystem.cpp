@@ -11,7 +11,6 @@ void pwd() {
 }
 
 void changeDir(string pathname) {
-  fs::path cwd = fs::current_path();
   if (!fs::exists(pathname)) {
     cout << "cd: " << pathname << ": No such file or directory" << endl;
   } else {
