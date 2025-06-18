@@ -96,3 +96,4 @@ void execute(string keyword, string argument) {
 }
 
 string getUser() { return getenv("USER"); }
+string getHome() { return getenv("HOME"); }
