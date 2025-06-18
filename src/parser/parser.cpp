@@ -12,6 +12,8 @@ void parser(vector<string> tokens) {
     exit();
   } else if (keyword == "type") {
     type(argument);
+  } else if (keyword == "pwd") {
+    pwd();
   } else {
     execute(keyword, argument);
   }

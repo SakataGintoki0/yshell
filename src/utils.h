@@ -12,6 +12,7 @@ void handleEcho(string argument);
 void exit();
 void printError(string cmd, string message);
 void type(string argument);
+void pwd();
 
 // helpers
 bool binarySearchString(vector<string> arr, string word);
