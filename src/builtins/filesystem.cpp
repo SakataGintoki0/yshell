@@ -10,8 +10,6 @@ void pwd() {
   cout << cwd.string() << endl;
 }
 
-// /home/username
-
 void changeDir(string pathname) {
   if (pathname[0] == '~') {
     string appendUser = "/" + getHome() + "/" + getUser();
